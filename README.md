@@ -45,7 +45,7 @@ Taro3 与 原生 React Native 应用结合的 Demo
 - 导航相关不再处理，因此路由，导航栏, Tabbar相关API不可用
 - 页面需要配置，页面函数，比如onPageScroll等，需要用`@tarojs/runtime-rn`里的方法    `createPageConfig`包装，参考如下：
 
-```
+```js
 import { createPageConfig } from '@tarojs/runtime-rn'
 import PagesTaroPageApi from './src/pages/taroPage/api'
 import PagesTaroPageApiConfig from './src/pages/taroPage/api.config'
@@ -61,7 +61,7 @@ import PagesTaroPageApiConfig from './src/pages/taroPage/api.config'
 
 - pxTransform 该方法，目前默认是 designWidth 是750，如果要设置其他的尺寸，需将全局配置挂载到global中
 
-```
+```js
 global.__taroAppConfig.appConfig = {
    designWidth: 750,
    deviceRatio: {
@@ -74,7 +74,7 @@ global.__taroAppConfig.appConfig = {
 
 - 目前 Taro的Picker组件是封装的ant-design，因此，如果使用 Picker，需要在根节点注入and-design 的 Provider
 
-```
+```js
     return <AntProvider>
       <NavigationContainer>
       .....
