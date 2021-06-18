@@ -12,5 +12,6 @@ const taroMetroConfig = supporter.getMetroConfig()
 
 const busConfig = {
   resetCache:true,
+  resolver: {},
 }
 module.exports = mergeConfig(busConfig,taroMetroConfig)
