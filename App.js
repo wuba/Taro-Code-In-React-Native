@@ -6,6 +6,9 @@
  * @flow strict-local
  */
 
+import { Provider } from 'react-redux';
+import { configureStore } from './src/store/index'
+
 import React from 'react';
 import {
   View,
@@ -236,6 +239,7 @@ const App: () => React$Node = () => {
 
   return (
     <AntProvider>
+    <Provider store={configureStore({})}>
     <NavigationContainer 
       ref={navigationRef}
       onReady={() => {
@@ -261,6 +265,7 @@ const App: () => React$Node = () => {
           }
       </PageStack.Navigator>
     </NavigationContainer>
+    </Provider>
     </AntProvider>
   );
 };
