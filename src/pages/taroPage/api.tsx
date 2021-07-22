@@ -12,7 +12,7 @@ import {
 import { navigateTo } from '../../utils/navigate';
 import './api.scss'
 
-function component () {
+const TaroApiPage =  ()=> {
   const [result, setResult] = useState("initialState")
 
   return (<View>
@@ -63,4 +63,4 @@ function handleBarCodeScanned(type, data){
   alert(`Bar code with type ${type} and data ${data} has been scanned!`)
 }
 
-export default component
+export default TaroApiPage

@@ -7,10 +7,8 @@
  */
 
 import React from 'react';
-import {
-  View,
-  Text,
-} from 'react-native';
+import type {Node} from 'react'
+
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/stack'
 import AntProvider from '@ant-design/react-native/lib/provider';
@@ -217,7 +215,7 @@ function HomeTabs () {
         component={Mine} />
       <Tab.Screen name="TaroAPI"
         options={{ tabBarLabel: 'TaroAPI' }}
-        component={createPageConfig(PagesTaroPageApi, { pagePath: '/pages/taroPage/api', ...PagesTaroPageApiConfig })} />
+        component={PagesTaroPageApi} />
       <Tab.Screen
         name="taroComponent"
         options={{ tabBarLabel: 'TaroComponent' }}
@@ -226,7 +224,7 @@ function HomeTabs () {
   )
 }
 
-const App: () => React$Node = () => {
+const App: () => Node = () =>{
 
   React.useEffect(() => {
     return () => {
