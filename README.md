@@ -3,6 +3,8 @@
 
 Taro3 与 原生 React Native 应用结合的 Demo
 
+**该方案仅供参考，不再更新，建议使用 https://github.com/wuba/taro-playground**
+
 ## 基本介绍
 
 为了支持在 React Native 项目中引入 Taro3 代码，Taro提供了一种两者结合方案.
